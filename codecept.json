@@ -1,0 +1,26 @@
+{
+  "output": "./output",
+  "helpers": {
+    "Puppeteer": {
+      "url": "http://localhost:8000",
+      "waitForNavigation": "networkidle0",
+      "show": true
+    }
+  },
+  "include": {
+    "I": "./e2e/tests/steps_file.js",
+    "budgetPage": "./e2e/pages/budgetPage.js"
+  },
+  "mocha": {
+    "reporterOptions": {
+        "reportDir": "output"
+    }
+  },
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {},
+  "tests": "./e2e/tests/*_test.js",
+  "timeout": 10000,
+  "name": "budgeting"
+}
